@@ -16,7 +16,7 @@ phases:
       - echo Build started on `date`
       - echo Compiling the Node.js code
       - yarn build 
-      - yarn tsc -p ./src/server
+      - tsc -p ./src/server
   post_build:
     commands:
       - echo Build completed on `date`
