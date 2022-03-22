@@ -22,8 +22,12 @@ phases:
   post_build:
     commands:
       - echo Build completed on `date`
+      - ls -R
 # Include only the files required for your application to run.
 artifacts:
   files:
     - '**/*'
+    - 'dist/*'
+    - package.json
+    - node_modules/**/*
   # base-directory: 'dist'
