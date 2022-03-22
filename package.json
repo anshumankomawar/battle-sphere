@@ -2,6 +2,7 @@
   "name": "battle-sphere",
   "version": "1.0.0",
   "license": "MIT",
+  "files": [ "/dist" ],
   "scripts": {
     "build": "webpack --config ./src/client/webpack.prod.js",
     "dev": "concurrently -k \"tsc -p ./src/server -w\" \"nodemon ./dist/server/server.js\" \"webpack serve --config ./src/client/webpack.dev.js\"",
