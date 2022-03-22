@@ -9,8 +9,6 @@ phases:
       - npm install yarn 
       - echo Installing typescript...
       - npm install typescript -g
-      - echo Installing tree...
-      - sudo apt install tree 
   pre_build:
     commands:
       - echo Installing source dependencies...
@@ -24,7 +22,7 @@ phases:
   post_build:
     commands:
       - echo Build completed on `date`
-      - tree -a .
+      - ls -R
 # Include only the files required for your application to run.
 artifacts:
   files:
