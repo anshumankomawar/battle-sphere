@@ -13,7 +13,7 @@ import path from 'path'
 import http from 'http'
 import { Server, Socket } from 'socket.io'
 
-const port: number = 3000
+const port: number = 8080 
 
 class App {
     private server: http.Server
