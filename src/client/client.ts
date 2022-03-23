@@ -44,7 +44,7 @@ let timestamp = 0
 const clientCubes: { [id: string]: THREE.Mesh } = {}
 const socket = io()
 socket.on('connect', function () {
-    console.log('connect')
+    console.log('connected!!')
 })
 socket.on('disconnect', function (message: any) {
     console.log('disconnect ' + message)
