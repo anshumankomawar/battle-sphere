@@ -5,7 +5,6 @@ phases:
     runtime-versions:
       nodejs: 12
     commands:
-      - ls dist -R
       - echo Installing Yarn...
       - npm install yarn 
       - echo Installing typescript...
@@ -14,23 +13,17 @@ phases:
     commands:
       - echo Installing source dependencies...
       - yarn install
-      - ls dist -R
   build:
     commands:
       - echo Build started on `date`
       - echo Compiling the Node.js code
       - yarn build 
       - tsc -p ./src/server
-      - ls dist -R
   post_build:
     commands:
       - echo Build completed on `date`
-      - ls dist -R
 # Include only the files required for your application to run.
 artifacts:
   files:
     - '**/*'
-    - 'dist/**/*'
-    - package.json
-    - node_modules/**/*
   base-directory: 'dist'
